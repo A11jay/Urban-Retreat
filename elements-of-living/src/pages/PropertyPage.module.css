@@ -1,0 +1,252 @@
+.propertyContainer {
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.hero {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+}
+
+.heroContent h1 {
+  font-size: clamp(4rem, 8vw, 7rem);
+  margin-bottom: 0.5rem;
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.intro {
+  padding: 6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.introText {
+  flex: 2;
+}
+
+.introText p {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+
+.introStats {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.introStats div {
+  text-align: center;
+}
+
+.introStats h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+.introStats span {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.experience {
+  padding: 4rem 0;
+}
+
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.amenityItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.amenityItem:hover {
+  transform: translateY(-5px);
+}
+
+.amenityItem span {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.gallery {
+  padding: 4rem 0;
+}
+
+.masonryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.galleryItem {
+  height: 300px;
+  border-radius: 8px;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Make first item larger */
+.galleryItem:first-child {
+  grid-column: 1 / -1;
+  height: 500px;
+}
+
+.availability {
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.availabilityCard {
+  width: 100%;
+  max-width: 800px;
+  padding: 4rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.bookingForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: flex-end;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.formGroup label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Sticky Booking Bar */
+.stickyBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 90;
+  padding: 1rem 0;
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.stickyBarVisible {
+  transform: translateY(0);
+}
+
+.stickyContent {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stickyInfo h4 {
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.stickyInfo p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+  
+  .introStats {
+    width: 100%;
+  }
+
+  .bookingForm {
+    grid-template-columns: 1fr;
+  }
+  
+  .availabilityCard {
+    padding: 2rem;
+  }
+
+  .stickyBar {
+    display: none; /* Hide sticky bar on mobile, rely on bottom nav */
+  }
+}

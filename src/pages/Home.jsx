@@ -96,6 +96,24 @@ const reviews = [
     date: 'Mar 2026',
     rating: 5,
     text: "Had a really great stay at this place. The flat was clean, well maintained, and looked exactly like the photos. The space was comfortable, private, and perfect for a relaxing stay. Thank you for the great hospitality!"
+  },
+  {
+    name: 'Ayush',
+    date: 'Dec 2025',
+    rating: 5,
+    text: "One of the Great place to stay in Indore... lived the ambiance and the homely stay ❤️"
+  },
+  {
+    name: 'Rushikesh',
+    date: 'Nov 2025',
+    rating: 5,
+    text: "Lovely little apartment that's easy to get to! Place was clean and felt like a home! Abhishek was a great host! He was responsive and answered all questions and also recommended us a few places! Highly recommend!"
+  },
+  {
+    name: 'Subhanshu',
+    date: 'Sept 2025',
+    rating: 5,
+    text: "I had an absolutely amazing stay! The room was spotless, well-maintained, and beautifully set up. From check-in to check-out, everything was smooth and hassle-free. The host was incredibly welcoming and made sure I felt at home. 100% recommend!"
   }
 ];
 

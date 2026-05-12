@@ -217,9 +217,15 @@ const PropertyPage = () => {
                   ))}
                 </select>
               </div>
-              <button type="button" className={`btn ${isDark ? '' : 'btn-primary'}`} style={{ width: '100%', borderColor: textColor, color: isDark ? textColor : '' }}>
+              <a 
+                href="https://wa.me/918827231536" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`btn ${isDark ? '' : 'btn-primary'}`} 
+                style={{ width: '100%', borderColor: textColor, color: isDark ? textColor : '', textAlign: 'center', textDecoration: 'none' }}
+              >
                 Check Availability
-              </button>
+              </a>
             </form>
           </div>
         </section>
@@ -232,9 +238,15 @@ const PropertyPage = () => {
             <h4>{unit.title} <span style={{ fontSize: '0.8rem', opacity: 0.7, fontWeight: 'normal' }}>({unit.type})</span></h4>
             <p>{unit.price} / night</p>
           </div>
-          <Link to="/#contact" className={`btn ${isDark ? '' : 'btn-primary'}`} style={{ padding: '0.75rem 2rem', borderColor: textColor, color: isDark ? textColor : '' }}>
+          <a 
+            href="https://wa.me/918827231536" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`btn ${isDark ? '' : 'btn-primary'}`} 
+            style={{ padding: '0.75rem 2rem', borderColor: textColor, color: isDark ? textColor : '', textDecoration: 'none' }}
+          >
             Book Now
-          </Link>
+          </a>
         </div>
       </div>
     </div>

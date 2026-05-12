@@ -26,8 +26,8 @@ const Layout = ({ children }) => {
       <header className={styles.header}>
         <div className={styles.headerContainer}>
           <div className={styles.logo}>
-            <Link to="/">
-              <img src="/assets/logo.png" alt="Urban Retreat" className={styles.logoImage} onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'block'; }} />
+            <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <img src="/assets/logo_new.png" alt="Urban Retreat" className={styles.logoImage} />
               <span style={{ display: 'none' }}>Urban Retreat</span>
             </Link>
           </div>
@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
           </nav>
           
           <div className={styles.headerActions}>
-            <Link to="/#contact" className="btn btn-primary" style={{ padding: '0.75rem 1.5rem', fontSize: '0.8rem' }}>
+            <Link to="/#contact" className={`btn btn-primary ${styles.headerBtn}`}>
               Book Now
             </Link>
             <button className={styles.menuToggle} onClick={() => setIsMenuOpen(!isMenuOpen)}>

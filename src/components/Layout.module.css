@@ -35,10 +35,11 @@
 }
 
 .logoImage {
-  height: 64px;
+  height: 60px;
   width: auto;
   object-fit: contain;
-  transition: height 0.3s ease;
+  mix-blend-mode: multiply;
+  transition: all 0.3s ease;
 }
 
 .desktopNav {
@@ -138,6 +139,12 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
+
+.headerBtn {
+  padding: 0.6rem 1.2rem !important;
+  font-size: 0.8rem !important;
+  min-width: auto !important;
 }
 
 .menuToggle {

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Star } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './Home.module.css';
@@ -13,7 +14,7 @@ const units = [
     theme: 'Soft fades, floral motifs',
     color: '#FAD0C9',
     textColor: '#1A1A1A',
-    image: '/assets/1000885391.jpg'
+    image: '/assets/blossom_1.png'
   },
   {
     id: 'leaf',
@@ -21,7 +22,7 @@ const units = [
     theme: 'Organic shapes, lush greenery',
     color: '#C1CFA1',
     textColor: '#1A1A1A',
-    image: '/assets/1000885394.jpg'
+    image: '/assets/leaf_1.jpg'
   },
   {
     id: 'wood',
@@ -29,7 +30,7 @@ const units = [
     theme: 'Architectural lines, earth tones',
     color: '#D4A373',
     textColor: '#1A1A1A',
-    image: '/assets/1000885407.jpg'
+    image: '/assets/wood_1.png'
   },
   {
     id: 'heaven',
@@ -37,7 +38,7 @@ const units = [
     theme: 'Airy whites, floating elements',
     color: '#E8EAED',
     textColor: '#1A1A1A',
-    image: '/assets/1000885411.jpg'
+    image: '/assets/heaven_2.png'
   },
   {
     id: 'galaxy',
@@ -45,7 +46,7 @@ const units = [
     theme: 'Glassmorphism, deep space',
     color: '#121212',
     textColor: '#F5F5F5',
-    image: '/assets/1000885421.jpg'
+    image: '/assets/galaxy_1.jpg'
   },
   {
     id: 'farmhouse',
@@ -54,6 +55,47 @@ const units = [
     color: '#90A955',
     textColor: '#F5F5F5',
     image: '/assets/1000885426.jpg'
+  },
+  {
+    id: 'crystal',
+    title: 'Crystal',
+    theme: 'Elegance, peace, and modern living',
+    color: '#D8E2DC',
+    textColor: '#1A1A1A',
+    image: '/assets/crystal_1.jpg'
+  }
+];
+
+const reviews = [
+  {
+    name: 'Agnes',
+    date: 'Nov 2025',
+    rating: 5,
+    text: 'Thank you for the comfortable stay. Gratitude 🙏'
+  },
+  {
+    name: 'Zainab',
+    date: 'Jul 2025',
+    rating: 5,
+    text: 'Abishek was a great host, his place was clean. He was very cooperative and helped us throughout. Appreciate that.'
+  },
+  {
+    name: 'Sudarshan',
+    date: 'Jan 2026',
+    rating: 5,
+    text: "Abhishek's property and his responsiveness to our needs were top notch. The flat overall was well furnished and had all useful stuff. The location is amazing too. I would absolutely recommend booking this property."
+  },
+  {
+    name: 'Prathmesh',
+    date: 'Dec 2025',
+    rating: 5,
+    text: "The place was spotlessly clean and very well maintained. The kitchen is perfect for cooking, with all utensils clean and neatly arranged. Abhishek is a great host, very supportive and responsive. Highly recommended!"
+  },
+  {
+    name: 'Jatin',
+    date: 'Mar 2026',
+    rating: 5,
+    text: "Had a really great stay at this place. The flat was clean, well maintained, and looked exactly like the photos. The space was comfortable, private, and perfect for a relaxing stay. Thank you for the great hospitality!"
   }
 ];
 
@@ -150,6 +192,38 @@ const Home = () => {
         </div>
       </section>
       
+      {/* Guest Experiences Section */}
+      <section className={styles.reviewsSection} id="reviews">
+        <div className="container">
+          <div className={styles.reviewsHeader}>
+            <p className="subtitle">Testimonials</p>
+            <h2>Guest Experiences</h2>
+          </div>
+          
+          <div className={styles.reviewsGrid}>
+            {reviews.map((review, index) => (
+              <div key={index} className={styles.reviewCard}>
+                <div className={styles.reviewRating}>
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star key={i} size={16} fill="currentColor" />
+                  ))}
+                </div>
+                <p className={styles.reviewText}>"{review.text}"</p>
+                <div className={styles.reviewAuthor}>
+                  <div className={styles.authorAvatar}>
+                    {review.name.charAt(0)}
+                  </div>
+                  <div className={styles.authorInfo}>
+                    <h4>{review.name}</h4>
+                    <span>{review.date}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer / Contact Section */}
       <section className={styles.contactSection} id="contact">
         <div className="container">

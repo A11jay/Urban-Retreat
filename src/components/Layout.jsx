@@ -42,6 +42,7 @@ const Layout = ({ children }) => {
                 <Link to="/property/heaven" onClick={() => setIsUnitsOpen(false)}>Heaven</Link>
                 <Link to="/property/galaxy" onClick={() => setIsUnitsOpen(false)}>Galaxy</Link>
                 <Link to="/property/farmhouse" onClick={() => setIsUnitsOpen(false)}>Farm House</Link>
+                <Link to="/property/crystal" onClick={() => setIsUnitsOpen(false)}>Crystal</Link>
               </div>
             </div>
             <Link to="/#units">Experiences</Link>
@@ -85,6 +86,7 @@ const Layout = ({ children }) => {
               <Link to="/property/heaven" className={styles.mobileSubLink} onClick={() => { setIsMenuOpen(false); setIsUnitsOpen(false); }}>Heaven</Link>
               <Link to="/property/galaxy" className={styles.mobileSubLink} onClick={() => { setIsMenuOpen(false); setIsUnitsOpen(false); }}>Galaxy</Link>
               <Link to="/property/farmhouse" className={styles.mobileSubLink} onClick={() => { setIsMenuOpen(false); setIsUnitsOpen(false); }}>Farm House</Link>
+              <Link to="/property/crystal" className={styles.mobileSubLink} onClick={() => { setIsMenuOpen(false); setIsUnitsOpen(false); }}>Crystal</Link>
             </div>
           </div>
 

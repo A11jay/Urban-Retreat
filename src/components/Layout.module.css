@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 5%;
+  padding: 0.25rem 5%;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -35,7 +35,7 @@
 }
 
 .logoImage {
-  height: 60px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   mix-blend-mode: multiply;
@@ -277,6 +277,6 @@
     display: none;
   }
   .logoImage {
-    height: 80px;
+    height: 110px;
   }
 }

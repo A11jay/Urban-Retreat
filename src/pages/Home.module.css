@@ -15,7 +15,7 @@
 }
 
 .heroContent {
-  flex: 1;
+  flex: 0 0 45%;
   position: relative;
   z-index: 10;
   text-align: left;
@@ -38,7 +38,7 @@
 }
 
 .heroVideoWrapper {
-  flex: 1;
+  flex: 0 0 50%;
   height: 75vh;
   position: relative;
   border-radius: 300px 300px 0 0;
@@ -69,6 +69,7 @@
   }
   
   .heroContent {
+    flex: 1;
     padding-right: 0;
     margin-bottom: 3rem;
   }
@@ -79,6 +80,7 @@
   }
   
   .heroVideoWrapper {
+    flex: 1;
     width: 100%;
     height: 50vh;
     border-radius: 150px 150px 0 0;
@@ -104,21 +106,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5%;
-  transition: background-color 0.5s ease;
+  padding: 0 5%;
+  transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .unitContent {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
-  max-width: 1440px;
-  gap: 4rem;
+  max-width: 1400px;
+  gap: 5%;
+  height: 80vh;
 }
 
 .unitText {
-  flex: 1;
+  flex: 0 0 40%;
+  max-width: 500px;
+  z-index: 2;
 }
 
 .unitNumber {
@@ -153,9 +158,10 @@
 }
 
 .unitImageWrapper {
-  flex: 1;
-  height: 70vh;
+  flex: 0 0 55%;
+  height: 100%;
   position: relative;
+  min-width: 300px;
 }
 
 .unitImageInner {
@@ -170,17 +176,30 @@
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .unitContent {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    gap: 2rem;
+    height: auto;
   }
   
+  .unitText {
+    flex: 1;
+    max-width: 100%;
+    order: 2;
+  }
+
   .unitImageWrapper {
+    flex: 0 0 50vh;
     width: 100%;
-    height: 40vh;
-    order: -1;
+    min-width: auto;
+    order: 1;
+  }
+  
+  .unitText h2 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
   }
 }
 
